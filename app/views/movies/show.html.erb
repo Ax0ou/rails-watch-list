@@ -1,0 +1,6 @@
+<h1><%= @movie["title"] %></h1>
+<%= image_tag "https://image.tmdb.org/t/p/w500#{@movie["poster_path"]}" %>
+<p><strong>Note :</strong> <%= @movie["vote_average"] %></p>
+<p><%= @movie["overview"] %></p>
+<%= link_to "← Retour à la liste", movies_path, class: "btn btn-outline-secondary mt-3" %>
+

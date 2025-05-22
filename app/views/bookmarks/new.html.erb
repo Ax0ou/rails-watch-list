@@ -1,0 +1,5 @@
+<%= simple_form_for [@list, @bookmark] do |f| %>
+  <%= f.input :movie, collection: Movie.all, prompt: "Choisis un film" %>
+  <%= f.input :comment %>
+  <%= f.submit "Ajouter le signet" %>
+<% end %>

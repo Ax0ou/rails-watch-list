@@ -1,0 +1,16 @@
+<h1>Films populaires</h1>
+
+<div class="row">
+  <% @movies.each do |movie| %>
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <%= image_tag "https://image.tmdb.org/t/p/w500#{movie["poster_path"]}", class: "card-img-top" %>
+        <div class="card-body">
+          <h5 class="card-title"><%= movie["title"] %></h5>
+          <p class="card-text"><%= truncate(movie["overview"], length: 100) %></p>
+          <%= link_to "Voir", movie_path(movie["id"]), class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
